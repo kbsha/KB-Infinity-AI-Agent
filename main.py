@@ -3,7 +3,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from agent import run_agent
-import uvicorn
+# import uvicorn
 
 app = FastAPI()
 
@@ -37,5 +37,5 @@ def invoke_agent(request: AgentRequest):
     return AgentResponse(response=result)
 
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8001)
+# if __name__ == "__main__":
+#     uvicorn.run(app, host="127.0.0.1", port=8001)
